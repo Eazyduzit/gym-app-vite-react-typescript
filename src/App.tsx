@@ -3,9 +3,9 @@ import Navbar from "@/scenes/navbar"
 function App() {
   return (
     <div className="app bg-gray-20">
-      <Navbar />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
     </div>
   )
 }
 
-export default App;
+export default App
