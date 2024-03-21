@@ -38,12 +38,29 @@ const Home = ({ setSelectedPage }: Props) => {
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-            ></AnchorLink>
+              href={`#${SelectedPage.ContactUs}`}
+            >
+              <p>Learn More</p>
+            </AnchorLink>
           </div>
         </div>
         {/* IMAGE */}
-        <div></div>
+        <div>
+          <img src={HomePageGraphic} alt="home-page-graphic" />
+        </div>
       </div>
+      {/* SPONSORS */}
+      {isAboveMediumScreens && (
+        <div>
+          <div>
+            <div>
+              <img src={SponsorRedBull} alt="redbull-sponsor" />
+              <img src={SponsorForbes} alt="forbes-sponsor" />
+              <img src={SponsorFortune} alt="fortune-sponsor" />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
