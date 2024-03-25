@@ -87,14 +87,28 @@ const Benefits = ({ setSelectedPage }: Props) => {
             {/* TITLE */}
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
-                <HText>
-                  MILLIONS OF HAPPY MEMBERS GETTING <span className="text-primary-500">FIT</span>
-                </HText>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } }}
+                >
+                  <HText>
+                    MILLIONS OF HAPPY MEMBERS GETTING <span className="text-primary-500">FIT</span>
+                  </HText>
+                </motion.div>
               </div>
             </div>
 
             {/* DESCRIPTION */}
-            <div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } }}
+            >
               <p className="my-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -108,7 +122,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
-            </div>
+            </motion.div>
 
             {/* BUTTON */}
             <div className="relative mt-16">
