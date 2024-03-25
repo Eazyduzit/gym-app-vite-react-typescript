@@ -3,6 +3,7 @@ import { BenefitType, SelectedPage } from "@/shared/types"
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react/24/solid"
 import { motion } from "framer-motion"
 import Benefit from "./Benefit"
+import ActionButton from "@/shared/ActionButton"
 
 const benefits: Array<BenefitType> = [
   {
@@ -92,8 +93,28 @@ const Benefits = ({ setSelectedPage }: Props) => {
             </div>
 
             {/* DESCRIPTION */}
+            <div>
+              <p className="my-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+              <p className="mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
 
             {/* BUTTON */}
+            <div className="relative mt-16">
+              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
