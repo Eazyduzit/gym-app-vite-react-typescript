@@ -4,6 +4,7 @@ import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from "@heroicons/react
 import { motion } from "framer-motion"
 import Benefit from "./Benefit"
 import ActionButton from "@/shared/ActionButton"
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
 
 const benefits: Array<BenefitType> = [
   {
@@ -77,9 +78,9 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </motion.div>
 
         {/* GRAPHICS AND DESCRIPTION */}
-        <div>
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
           {/* GRAPHIC */}
-          <img src="" alt="" />
+          <img className="mx-auto" src={BenefitsPageGraphic} alt="benefits-page-graphic" />
 
           {/* DESCRIPTION */}
           <div>
