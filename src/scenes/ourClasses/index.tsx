@@ -8,6 +8,45 @@ import image4 from "@/assets/image4.png"
 import image5 from "@/assets/image5.png"
 import image6 from "@/assets/image6.png"
 
+const classes: Array<ClassType> = [
+  {
+    image: image1,
+    name: "Weight Training Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    image: image2,
+    name: "Yoga Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    image: image3,
+    name: "Ab Core Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    image: image4,
+    name: "Adventure Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    image: image5,
+    name: "Fitness Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    image: image6,
+    name: "Training Classes",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+]
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
@@ -33,6 +72,13 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             </p>
           </div>
         </motion.div>
+        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
+          <ul className="w-[2800px] whitespace-nowrap">
+            {classes.map((item, index) => (
+              <Class />
+            ))}
+          </ul>
+        </div>
       </motion.div>
     </section>
   )
