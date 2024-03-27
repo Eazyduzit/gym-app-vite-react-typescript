@@ -3,6 +3,7 @@ import { SelectedPage } from "@/shared/types"
 import { motion } from "framer-motion"
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png"
 import HText from "@/shared/HText"
+import { error } from "console"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
@@ -60,7 +61,18 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               method="POST"
               action="https://formsubmit.co/my@email.com" //replace with crypted email..
             >
-              <input className={inputStyles} type="text" />
+              <input
+                className={inputStyles}
+                type="text"
+                placeholder="NAME"
+                {...register("name", { required: true, maxLength: 100 })}
+              />
+              {error.name && (
+                <p className="mt-1 text-primary-500">
+                  {errors.name.type === "required" && "This field is required."}
+                  {errors.name.type === "maxLength" && "Max length is 100 characters."}
+                </p>
+              )}
             </form>
           </motion.div>
         </div>
