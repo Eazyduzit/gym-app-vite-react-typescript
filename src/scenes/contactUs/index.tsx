@@ -9,6 +9,18 @@ type Props = {
 }
 
 const ContactUs = ({ setSelectedPage }: Props) => {
+  const {
+    register,
+    trigger,
+    formState: { errors },
+  } = useForm()
+  const onSubmit = async (e: any) => {
+    const isValid = await trigger()
+    if (!isValid) {
+      e.preventDefault()
+    }
+  }
+
   return (
     <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
@@ -30,6 +42,25 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </motion.div>
+
+        {/* FORM AND IMAGE */}
+        <div className="mt-10 justify-between gap-8 md:flex">
+          <motion.div
+            className="mt-10 basis-3/5 md:mt-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
+          >
+            <form
+              target="_blank"
+              onSubmit={onSubmit}
+              method="POST"
+              action="https://formsubmit.co/my@email.com" //replace with crypted email..
+            ></form>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   )
