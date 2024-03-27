@@ -58,7 +58,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
-              action="https://formsubmit.co/my@email.com" //replace with crypted email..
+              action="https://formsubmit.co/8881aa1ce15c0dcc8179de03e48ff71a"
             >
               <input
                 className={inputStyles}
