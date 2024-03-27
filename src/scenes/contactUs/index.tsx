@@ -3,14 +3,13 @@ import { SelectedPage } from "@/shared/types"
 import { motion } from "framer-motion"
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png"
 import HText from "@/shared/HText"
-import { error } from "console"
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`
+  const inputStyles = `mt-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`
   const {
     register,
     trigger,
@@ -90,9 +89,10 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 </p>
               )}
 
-              <input
+              <textarea
                 className={inputStyles}
-                type="text"
+                rows={4}
+                cols={50}
                 placeholder="MESSAGE"
                 {...register("message", { required: true, maxLength: 2000 })}
               />
@@ -102,6 +102,13 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                   {errors.message.type === "maxLength" && "Max length is 2000 characters."}
                 </p>
               )}
+
+              <button
+                type="submit"
+                className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
+              >
+                SUBMIT
+              </button>
             </form>
           </motion.div>
         </div>
