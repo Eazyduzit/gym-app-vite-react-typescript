@@ -9,6 +9,7 @@ type Props = {
 }
 
 const ContactUs = ({ setSelectedPage }: Props) => {
+  const inputStyles = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`
   const {
     register,
     trigger,
@@ -58,7 +59,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               onSubmit={onSubmit}
               method="POST"
               action="https://formsubmit.co/my@email.com" //replace with crypted email..
-            ></form>
+            >
+              <input className={inputStyles} type="text" />
+            </form>
           </motion.div>
         </div>
       </motion.div>
