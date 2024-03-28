@@ -1,5 +1,4 @@
 import Logo from "@/assets/Logo.png"
-import HText from "@/shared/HText"
 
 const Footer = () => {
   return (
@@ -14,16 +13,16 @@ const Footer = () => {
           </p>
           <p>@ Evogym All rights reserved.</p>
         </div>
-        <div>
-          <HText>Links</HText>
-          <p></p>
-          <p></p>
-          <p></p>
+        <div className="mt-16 basis-1/4 md:mt-0">
+          <h4 className="font-bold">Links</h4>
+          <p className="my-5">Massa orci senectus</p>
+          <p className="my-5">Et gravida id et etiam</p>
+          <p>Ullamcorper vivamus</p>
         </div>
-        <div>
-          <HText>Contact Us</HText>
-          <p></p>
-          <p></p>
+        <div className="mt-16 basis-1/4 md:mt-0">
+          <h4 className="font-bold">Contact Us</h4>
+          <p className="my-5">Tempus metus mattis resus.</p>
+          <p className="my-5">(+47) 993 73 996</p>
         </div>
       </div>
     </footer>
