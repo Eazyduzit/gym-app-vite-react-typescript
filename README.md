@@ -1,6 +1,10 @@
-# This project is setup with Vite using React + TypeScript and Tailwind CSS.
+# App is now LIVE hosted on https://my-evogym-app.netlify.app
+
+## This project is setup with Vite using React + TypeScript and Tailwind CSS.
 
 ## Form is working and all submissions will go to my alternate email. (set up using: https://formsubmit.co/)
+
+### All credit goes to EdRoh. https://www.youtube.com/watch?v=I2NNxr3WPDo&list=PLtUoxdC5MHdkxeM68Ai_I91T8Q6WbnMhV&index=45&t=14s&ab_channel=EdRoh
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
